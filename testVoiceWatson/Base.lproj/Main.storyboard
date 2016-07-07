@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="testVoiceWatson" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCv-Lm-JeK">
+                                <rect key="frame" x="268" y="268" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="KcO-KC-AuM"/>
+                                    <constraint firstAttribute="height" constant="64" id="tK2-H3-1Bw"/>
+                                </constraints>
+                                <state key="normal" title="Record!" image="microphone"/>
+                                <connections>
+                                    <action selector="recordTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="ob1-J8-RXJ"/>
+                                    <action selector="recordTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kgA-g9-6Z0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlf-6d-pr7">
+                                <rect key="frame" x="267" y="369" width="67" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4Wc-Zc-LPa"/>
+                                    <constraint firstAttribute="width" constant="67" id="6Kp-cE-cE3"/>
+                                </constraints>
+                                <state key="normal" title="Play Back"/>
+                                <connections>
+                                    <action selector="playBack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SSc-QF-zrG"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="QKV-kX-dNM">
+                                <rect key="frame" x="290" y="407" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="FAI-nC-dEE"/>
+                                    <constraint firstAttribute="width" constant="20" id="Vji-Mv-XuY"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hold to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b49-fs-T4w">
+                                <rect key="frame" x="243" y="340" width="115" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="ITp-l0-MI6"/>
+                                    <constraint firstAttribute="height" constant="21" id="Wsn-S7-LGR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOc-ma-Sua">
+                                <rect key="frame" x="20" y="477" width="560" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="rgi-pu-ycX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dlf-6d-pr7" firstAttribute="top" secondItem="b49-fs-T4w" secondAttribute="bottom" constant="8" id="7Td-Te-dwT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hOc-ma-Sua" secondAttribute="bottom" constant="20" id="J2d-jy-N0o"/>
+                            <constraint firstItem="QKV-kX-dNM" firstAttribute="top" secondItem="dlf-6d-pr7" secondAttribute="bottom" constant="8" id="SHK-VY-l6j"/>
+                            <constraint firstItem="DCv-Lm-JeK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TJR-LO-NV9"/>
+                            <constraint firstItem="dlf-6d-pr7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tdq-uY-fbu"/>
+                            <constraint firstItem="hOc-ma-Sua" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ZBM-yC-19u"/>
+                            <constraint firstItem="hOc-ma-Sua" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ZME-Bz-KNk"/>
+                            <constraint firstItem="DCv-Lm-JeK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hJz-qm-Cga"/>
+                            <constraint firstItem="b49-fs-T4w" firstAttribute="top" secondItem="DCv-Lm-JeK" secondAttribute="bottom" constant="8" id="kb1-Lq-OyP"/>
+                            <constraint firstItem="QKV-kX-dNM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kdJ-F0-wZh"/>
+                            <constraint firstItem="b49-fs-T4w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sJb-xu-MDj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="recordOutlet" destination="DCv-Lm-JeK" id="Lg7-K3-WHH"/>
+                        <outlet property="resultTextLabel" destination="hOc-ma-Sua" id="nC3-p9-r2k"/>
+                        <outlet property="spinner" destination="QKV-kX-dNM" id="xgU-qy-lA7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="375" y="214"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="microphone" width="64" height="64"/>
+    </resources>
+</document>
